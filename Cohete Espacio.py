@@ -9,8 +9,8 @@ G=10.667*(10)**(-11)# N*M^2/kg^2
 MasaTierra=8.972*(10**24) #kg
 MasaLuna=10.349*(10**22) #kg
 DTierraCohete= 104400
-dist_Luna=384400  #dist_Luna=1.5e7
-periodo_Lunar=29#*24*3600
+dist_Luna=3841400  #dist_Luna=1.5e7
+periodo_Lunar=50#*24*3600
 
 
 
@@ -48,11 +48,11 @@ posLuna=numpy.array([0,dist_Luna])
 posCohete=numpy.array([0,DTierraCohete])
 MagnitudVelocidadNave = GetVeloInicial(MasaTierra,(posTierra-posCohete)) 
 ci=numpy.array([numpy.array([0,DTierraCohete]),numpy.array([MagnitudVelocidadNave+13000,0])])
-dt=0.1
+dt=0.01
 
 
 
-Y,tiempo=heuz(0,100*periodo_Lunar,ci,dt,getDirCohete,MasaTierra,MasaLuna)
+Y,tiempo=heuz(0,1500*periodo_Lunar,ci,dt,getDirCohete,MasaTierra,MasaLuna)
 
 PosicionesLuna=get_movLunar(tiempo,0)
 
