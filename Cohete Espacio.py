@@ -52,7 +52,7 @@ dt=0.1
 
 
 
-Y,tiempo=euler(0,100*periodo_Lunar,ci,dt,getDirCohete,MasaTierra,MasaLuna)
+Y,tiempo=heuz(0,100*periodo_Lunar,ci,dt,getDirCohete,MasaTierra,MasaLuna)
 
 PosicionesLuna=get_movLunar(tiempo,0)
 
