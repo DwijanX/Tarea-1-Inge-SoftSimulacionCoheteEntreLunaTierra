@@ -5,9 +5,9 @@ from EulerHeuz import heuz,euler,RungeKuta
 import numpy
 import matplotlib.pyplot as pl
 
-G=6.667*(10)**(-11)# N*M^2/kg^2
-MasaTierra=5.972*(10**24) #kg
-MasaLuna=7.349*(10**22) #kg
+G=10.667*(10)**(-11)# N*M^2/kg^2
+MasaTierra=8.972*(10**24) #kg
+MasaLuna=10.349*(10**22) #kg
 DTierraCohete= 104400
 dist_Luna=384400  #dist_Luna=1.5e7
 periodo_Lunar=29#*24*3600
@@ -52,7 +52,7 @@ dt=0.1
 
 
 
-Y,tiempo=heuz(0,100*periodo_Lunar,ci,dt,getDirCohete,MasaTierra,MasaLuna)
+Y,tiempo=euler(0,100*periodo_Lunar,ci,dt,getDirCohete,MasaTierra,MasaLuna)
 
 PosicionesLuna=get_movLunar(tiempo,0)
 
